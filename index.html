@@ -209,6 +209,48 @@
             margin-bottom: 4px;
         }
 
+        .company {
+            margin-bottom: 14px;
+        }
+
+        .role-stack {
+            position: relative;
+            margin-top: 8px;
+            padding-left: 18px;
+        }
+
+        .role-stack::before {
+            content: "";
+            position: absolute;
+            left: 4px;
+            top: 7px;
+            bottom: 7px;
+            width: 1px;
+            background: var(--rule);
+        }
+
+        .role-stack .entry {
+            position: relative;
+            margin-bottom: 12px;
+        }
+
+        .role-stack .entry:last-child {
+            margin-bottom: 0;
+        }
+
+        .role-stack .entry::before {
+            content: "";
+            position: absolute;
+            left: -17px;
+            top: 5px;
+            width: 7px;
+            height: 7px;
+            box-sizing: border-box;
+            border-radius: 50%;
+            background: var(--bg);
+            border: 1.5px solid var(--rule);
+        }
+
         ul {
             padding-left: 18px;
             margin-top: 2px;
@@ -424,39 +466,49 @@
 
         <div class="section-heading">Professional Experience</div>
 
-        <div class="entry">
+        <div class="company">
             <div class="entry-top">
                 <span class="entry-org">Agili8, Perth WA</span>
-                <span class="entry-date">Sep 2025 — Mar 2026</span>
+                <span class="entry-date">Jul 2025 — Mar 2026</span>
             </div>
-            <div class="entry-role">Software Engineer (Contract) · Hybrid</div>
-            <ul>
-                <li>Leading Android development (Kotlin, Jetpack Compose, Vuzix) for XRAI Vision, an AR collaboration
-                    platform for smart glasses</li>
-                <li>Design and implement seamless production features across Android and web (TypeScript, React,
-                    Firebase, Google Cloud)</li>
-                <li>Integrate cloud-based AI services (Vertex AI, Video Intelligence) into production workflows</li>
-                <li>Contribute to platform architecture, technical direction, and product design decisions</li>
-                <li>Collaborate directly with clients and stakeholders to refine requirements and deliver iterative
-                    releases</li>
-            </ul>
-        </div>
+            <div class="entry-role">Intern → Contract</div>
 
-        <div class="entry">
-            <div class="entry-top">
-                <span class="entry-org">Agili8, Perth WA</span>
-                <span class="entry-date">Jul 2025 — Sep 2025</span>
+            <div class="role-stack">
+                <div class="entry">
+                    <div class="entry-top">
+                        <span class="entry-org">Software Engineer (Contract)</span>
+                        <span class="entry-date">Sep 2025 — Mar 2026</span>
+                    </div>
+                    <div class="entry-role">Hybrid</div>
+                    <ul>
+                        <li>Android development (Kotlin, Jetpack Compose, Vuzix) for XRAI Vision, an AR collaboration
+                            platform for smart glasses</li>
+                        <li>Design and implement seamless production features across Android and web (TypeScript, React,
+                            Firebase, Google Cloud)</li>
+                        <li>Integrate cloud-based AI services (Vertex AI, Video Intelligence) into production workflows</li>
+                        <li>Contribute to platform architecture, technical direction, and product design decisions</li>
+                        <li>Collaborate directly with clients and stakeholders to refine requirements and deliver iterative
+                            releases</li>
+                    </ul>
+                </div>
+
+                <div class="entry">
+                    <div class="entry-top">
+                        <span class="entry-org">Software Engineer (Intern)</span>
+                        <span class="entry-date">Jul 2025 — Sep 2025</span>
+                    </div>
+                    <div class="entry-role">On-site</div>
+                    <ul>
+                        <li>Developed and delivered a research-ready specialised Android application connecting AR smart glasses
+                            to EEG hardware</li>
+                        <li>Implemented real-time, on-device AI object detection (YOLO/ONNX) for Android smart glasses,
+                            demonstrated in a production demo</li>
+                        <li>Delivered technical demonstrations and supported stakeholder engagement</li>
+                        <li>Designed structured test plans and validation strategies for production-scale Android and platform
+                            features</li>
+                    </ul>
+                </div>
             </div>
-            <div class="entry-role">Software Engineer (Intern) · On-site</div>
-            <ul>
-                <li>Developed and delivered a research-ready specialised Android application connecting AR smart glasses
-                    to EEG hardware</li>
-                <li>Implemented real-time, on-device AI object detection (YOLO/ONNX) for Android smart glasses,
-                    demonstrated in a production demo</li>
-                <li>Delivered technical demonstrations and supported stakeholder engagement</li>
-                <li>Designed structured test plans and validation strategies for production-scale Android and platform
-                    features</li>
-            </ul>
         </div>
 
         <div class="section-heading">Education</div>
@@ -464,11 +516,13 @@
         <div class="entry">
             <div class="entry-top">
                 <span class="entry-org">Murdoch University, Perth, WA</span>
-                <span class="entry-date">2022 — 2027 (part-time)</span>
+                <span class="entry-date">Expected completion Jun 2027</span>
             </div>
             <div class="entry-role">Bachelor of Information Technology</div>
             <div style="font-size:13px;">Majors in Computer Science and Artificial Intelligence &amp; Autonomous
-                Systems.</div>
+                Systems.
+            <br>
+                
         </div>
 
         <div class="section-heading">Skills</div>
@@ -562,6 +616,21 @@
         <div class="entry">
             <div class="entry-top">
                 <span class="project-title">
+                    <span class="project-name">Air Writing</span>
+                    <span class="date">2026</span>
+                </span>
+                <span class="project-meta"><a class="github-link" href="https://github.com/daverlon/IMU-Air-Writing-Demo" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg><use href="#github-icon"/></svg></a></span>
+            </div>
+            <div class="project-meta">
+                Python, PyTorch, Kotlin, nRF52840, BLE, IMU, EMNIST
+            </div>
+            <div class="project-desc">Hands-free air writing from a wrist-worn 6-axis IMU. Orientation projects a virtual pen onto a locked 2D page; strokes rasterise to 28×28 for an existing handwriting model.</div>
+            <a class="read-more" href="airwriting.html">Read more</a>
+        </div>
+
+        <div class="entry">
+            <div class="entry-top">
+                <span class="project-title">
                     <span class="project-name">KotlinYOLO</span>
                     <span class="date">2025</span>
                 </span>
@@ -594,7 +663,7 @@
                 <span class="project-meta"><a class="github-link" href="https://github.com/daverlon/ENGtoID" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg><use href="#github-icon"/></svg></a></span>
             </div>
             <div class="project-meta">Python, PyTorch, Matplotlib, pandas</div>
-            <div class="project-desc">End-to-end ~20M parameter Seq2Seq LSTM English–Indonesian translation system with preprocessing, training, and evaluation (100% in ICT303).</div>
+            <div class="project-desc">End-to-end ~20M parameter Seq2Seq LSTM English–Indonesian translation system with preprocessing, training, and evaluation.</div>
             <a class="read-more" href="engtoid.html">Read more</a>
         </div>
 
