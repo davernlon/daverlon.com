@@ -1,15 +1,14 @@
-const btn = document.getElementById('theme-toggle');
-const label = document.getElementById('toggle-label');
+const btn = document.getElementById("theme-toggle");
 
-if (document.documentElement.classList.contains("dark")) {
-    label.textContent = "light";
-} else {
-    label.textContent = "dark";
+function syncTheme() {
+    const dark = document.documentElement.classList.contains("dark");
+    if (btn) btn.setAttribute("aria-pressed", dark ? "true" : "false");
 }
 
-btn.addEventListener('click', () => {
-    const isDark = document.documentElement.classList.toggle('dark');
+syncTheme();
 
+btn?.addEventListener("click", () => {
+    const isDark = document.documentElement.classList.toggle("dark");
     localStorage.setItem("theme", isDark ? "dark" : "light");
-    label.textContent = isDark ? "light" : "dark";
+    syncTheme();
 });
